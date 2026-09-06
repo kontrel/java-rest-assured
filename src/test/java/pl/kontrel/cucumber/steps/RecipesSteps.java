@@ -14,8 +14,13 @@ import pl.kontrel.models.Recipe;
 
 public class RecipesSteps {
 
-  private final TestContext testContext = new TestContext();
-  private final RecipesApi recipesApi = new RecipesApi();
+  private final TestContext testContext;
+  private final RecipesApi recipesApi;
+
+  public RecipesSteps(TestContext testContext) {
+    this.testContext = testContext;
+    this.recipesApi = new RecipesApi();
+  }
 
   @When("I send GET request to get recipes")
   public void i_send_get_request_to_get_recipes() {
