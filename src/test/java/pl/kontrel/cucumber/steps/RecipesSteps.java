@@ -28,8 +28,8 @@ public class RecipesSteps {
   }
   
   @Then("response status code should be {int}")
-  public void response_status_code_should_be(Integer int1) {
-    assertEquals(int1, testContext.getResponse().getStatusCode());
+  public void response_status_code_should_be(Integer responseStatusCode) {
+    assertEquals(responseStatusCode, testContext.getResponse().getStatusCode());
   }
 
   @Then("response should contain recipes")
@@ -77,5 +77,18 @@ public class RecipesSteps {
   public void i_can_see_that_new_recipes_was_added() {
     String addedRecipeName = testContext.getResponse().jsonPath().getString("name");
     assertThat(addedRecipeName).isEqualTo("Pierogi");
+  }
+
+  @When("I send a DELETE request with recipe id {int}")
+  public void i_send_a_delete_request_with_recipe_id(Integer id) {
+    testContext.setResponse(recipesApi.deleteRecipe(id));
+  }
+
+  @Then("response should contain delete key set to true for recipe id {int}")
+  public void response_should_contain_delete_key_set_to_true_for_recipe_id(Integer id) {
+    Response response = testContext.getResponse();
+
+    assertThat(response.jsonPath().getInt("id")).isEqualTo(id);
+    assertThat(response.jsonPath().getString("isDeleted")).isEqualTo("true");
   }
 }

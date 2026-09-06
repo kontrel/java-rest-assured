@@ -27,3 +27,7 @@ Feature: Check recipes endpoint
     Given I have prepared a new recipe
     When I send POST request with new recipe data
     Then I can see that new recipes was added
+
+  Scenario: Delete recipe
+    When I send a DELETE request with recipe id 1
+    Then response should contain delete key set to true for recipe id 1
