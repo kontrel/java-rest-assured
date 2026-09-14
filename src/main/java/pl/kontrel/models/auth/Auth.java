@@ -1,5 +1,8 @@
 package pl.kontrel.models.auth;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Auth {
   private String id;
   private String username;

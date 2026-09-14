@@ -23,6 +23,7 @@ Feature: Check recipes endpoint
       | "Japanese Ramen Soup" | "Ramen"           |
       | "Vegetarian Stir-Fry" | "Stir"            |
 
+  @authenticated
   Scenario: Add new recipe
     Given I have prepared a new recipe
     When I send POST request with new recipe data
