@@ -10,7 +10,7 @@ Feature: Check recipes endpoint
     When I send GET request to get recipes with limit 10
     Then response status code should be 200
     And response should contain recipes
-    And number of recipes should be 10  
+    And number of recipes should be 10
 
   Scenario Outline: Get recipe by name
     When I send GET request to get recipe by name <recipeSearchQuery>
@@ -28,6 +28,7 @@ Feature: Check recipes endpoint
     When I send POST request with new recipe data
     Then I can see that new recipes was added
 
+  @authenticated
   Scenario: Delete recipe
     When I send a DELETE request with recipe id 1
     Then response should contain delete key set to true for recipe id 1

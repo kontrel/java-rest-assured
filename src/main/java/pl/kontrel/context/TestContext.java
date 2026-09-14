@@ -7,6 +7,7 @@ public class TestContext {
 
     private Recipe recipe;
     private Response response;
+    private String accessToken;
 
     public Recipe getRecipe() {
         return recipe;
@@ -23,4 +24,10 @@ public class TestContext {
     public void setResponse(Response response) {
         this.response = response;
     }
+
+    public void setAccessToken(String accessToken) {
+        this.accessToken = accessToken;
+    }
+
+    public String getAccessToken() { return accessToken; }
 }

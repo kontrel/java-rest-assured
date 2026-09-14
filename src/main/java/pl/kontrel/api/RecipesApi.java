@@ -10,43 +10,43 @@ public class RecipesApi {
 
   public Response getRecipes() {
     return given()
-      .spec(defaultSpec()).log().all()
+      .spec(defaultSpec())
       .when().get("/recipes")
-      .then().log().all()
+      .then()
       .extract().response();
   }
 
   public Response getRecipeByName(String recipeName) {
     return given()
-      .spec(defaultSpec()).log().all()
+      .spec(defaultSpec())
       .when().get("/recipes/search?q={name}", recipeName)
-      .then().log().all()
+      .then()
       .extract().response();
   }
 
   public Response getRecipesWithLimit(Integer limit) {
     return given()
-      .spec(defaultSpec()).log().all()
+      .spec(defaultSpec())
       .when().get("/recipes?limit={limit}", limit)
-      .then().log().all()
+      .then()
       .extract().response();
   }
 
   public Response addRecipe(Recipe recipe) {
     return given()
-      .spec(defaultSpec()).log().all()
+      .spec(defaultSpec())
       .body(recipe)
       .when().post("/recipes/add")
-      .then().log().all()
+      .then()
       .extract().response();
   }
 
   public Response deleteRecipe(int recipeId) {
     return given()
-      .spec(defaultSpec()).log().all()
+      .spec(defaultSpec())
       .pathParam("id", recipeId)
       .when().delete("/recipes/{id}")
-      .then().log().all()
+      .then()
       .extract().response();
   }
 }
