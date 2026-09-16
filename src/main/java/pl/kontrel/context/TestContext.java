@@ -1,7 +1,7 @@
 package pl.kontrel.context;
 
 import io.restassured.response.Response;
-import pl.kontrel.models.Recipe;
+import pl.kontrel.models.recipes.Recipe;
 
 public class TestContext {
 

@@ -1,4 +1,4 @@
-package pl.kontrel.models;
+package pl.kontrel.models.recipes;
 
 import java.util.List;
 

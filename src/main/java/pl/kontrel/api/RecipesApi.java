@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 import static pl.kontrel.specifications.RequestSpecificationFactory.defaultSpec;
 
 import io.restassured.response.Response;
-import pl.kontrel.models.Recipe;
+import pl.kontrel.models.recipes.Recipe;
 
 public class RecipesApi {
 

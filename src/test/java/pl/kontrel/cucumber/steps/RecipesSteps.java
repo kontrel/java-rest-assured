@@ -3,14 +3,13 @@ package pl.kontrel.cucumber.steps;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.assertj.core.api.Assertions.assertThat;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import pl.kontrel.api.RecipesApi;
 import pl.kontrel.context.TestContext;
-import pl.kontrel.models.Recipe;
+import pl.kontrel.models.recipes.Recipe;
 
 public class RecipesSteps {
 
