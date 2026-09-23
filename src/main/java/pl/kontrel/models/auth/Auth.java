@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Auth {
-  private String id;
+  private int id;
   private String username;
   private String email;
   private String firstName;
@@ -14,11 +14,11 @@ public class Auth {
   private String accessToken;
   private String refreshToken;
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
-  public void setId(String id) {
+  public void setId(int id) {
     this.id = id;
   }
 

@@ -25,19 +25,19 @@ public class UsersSteps {
   }
 
   @When("I ask about current user")
-  public void i_ask_about_current_user() {
+  public void iAskAboutCurrentUser() {
     testContext.setResponse(usersApi.getCurrentUser(testContext.getAccessToken()));
   }
 
   @Then("I get a current user details")
-  public void  i_get_a_current_user_details() {
+  public void  iGetACurrentUserDetails() {
     Auth authResponse = testContext.getResponse().as(Auth.class);
 
     assertThat(authResponse.getFirstName()).isEqualTo("Emily");
   }
 
   @When("I ask about all users")
-  public void i_ask_about_all_users() {
+  public void iAskAboutAllUsers() {
     testContext.setResponse(usersApi.getAllUsers());
   }
 

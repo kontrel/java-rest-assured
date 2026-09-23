@@ -23,5 +23,6 @@ public class AuthHooks {
     Auth auth = authApi.getAuthResponse(loginBody);
 
     context.setAccessToken(auth.getAccessToken());
+    context.setUserId(auth.getId());
   }
 }

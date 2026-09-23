@@ -14,8 +14,7 @@ public class UsersApi {
       .header("Authorization", "Bearer " + token)
       .when()
       .get("/auth/me")
-      .then()
-      .extract().response();
+      .thenReturn();
   }
 
   public Response getAllUsers() {

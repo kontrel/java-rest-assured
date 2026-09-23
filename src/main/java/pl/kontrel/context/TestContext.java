@@ -8,6 +8,7 @@ public class TestContext {
     private Recipe recipe;
     private Response response;
     private String accessToken;
+    private int userId;
 
     public Recipe getRecipe() {
         return recipe;
@@ -30,4 +31,12 @@ public class TestContext {
     }
 
     public String getAccessToken() { return accessToken; }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
 }
